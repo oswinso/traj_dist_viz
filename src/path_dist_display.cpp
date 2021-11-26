@@ -104,10 +104,9 @@ void PathDistDisplay::processMessage(const TrajDist::ConstPtr &msg) {
     Ogre::Matrix4 transform(orientation);
     transform.setTrans(position);
 
+    // Somehow alpha doesn't work with ManualObject lines... but oh well, Path also has this problem.
     Ogre::ColourValue color = color_property_->getOgreColor();
     color.a = alpha_property_->getFloat();
-
-    ROS_INFO_STREAM("alpha: " << color.a);
 
     size_t total_points = 0;
     for (const auto &path_msg : msg->paths) {
