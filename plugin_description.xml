@@ -1,0 +1,6 @@
+<library path="lib/libtraj_dist_viz">
+    <class name="traj_dist_viz/PathDistDisplay" type="traj_dist_viz::PathDistDisplay" base_class_type="rviz::Display">
+        <description>Displays a distribution of paths</description>
+        <message_type>traj_dist_viz/TrajDist</message_type>
+    </class>
+</library>
