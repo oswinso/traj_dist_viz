@@ -40,16 +40,16 @@ find_package(Boost REQUIRED COMPONENTS container)
 
 catkin_package()
 
-# ---------------- Eigen ----------------------------
-include(FetchContent)
-set(BUILD_TESTING OFF CACHE INTERNAL "")
-FetchContent_Declare(
-  eigen
-  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-  GIT_TAG        3.4.0
-  GIT_SHALLOW    TRUE
-)
-FetchContent_MakeAvailable(eigen)
+## ---------------- Eigen ----------------------------
+#include(FetchContent)
+#set(BUILD_TESTING OFF CACHE INTERNAL "")
+#FetchContent_Declare(
+#  eigen
+#  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+#  GIT_TAG        3.4.0
+#  GIT_SHALLOW    TRUE
+#)
+#FetchContent_MakeAvailable(eigen)
 
 set(SRC_FILES
   src/path_dist_display.cpp
